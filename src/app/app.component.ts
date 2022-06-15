@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'angular-assignment';
   hello: string = 'Hello World!';
   name: string = 'Donna';
+
+  setName(newName:string) {
+    this.name=newName;
+  } 
 }

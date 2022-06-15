@@ -1,9 +1,8 @@
-<div [(ngModel)="name"]>
+<div [(ngModel)]="name" ngDefaultControl>
     <button (click)="changeName('Lemon')">
         Change name
     </button>
 
-<h2>Hello{{name}}</h2>
+<h2>Hello {{name}}</h2>
 
 </div>
-<p>This, right here, is our header.</p>

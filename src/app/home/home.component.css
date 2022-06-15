@@ -1,8 +1,14 @@
-.first-element {
+.first {
   background-color: #ffca28;
 }
 
-.last-element {
+.last {
   background-color: #66bb6a;
 }
 
+.even {
+  background-color: #ffca28;
+}
+.odd {
+  background-color: #66bb6a;
+}

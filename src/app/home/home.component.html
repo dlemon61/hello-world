@@ -2,20 +2,20 @@
 <ul>
     <tr *ngFor="let movie of movies; let i = index; let first = first; let last = last;" [ngClass]="{ first: first, last: last}">
         <td>{{i}}</td>
-        <td>{{movie.title}</td>
-        <td>{{movie.genre}</td>
-        <td>{{movie.mainCharacter}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.genre}}</td>
+        <td>{{movie.mainCharacter}}</td>
         <td>{{movie.musicScore}}</td>
     </tr>    
 </ul>
-}
+<hr>
 
 <ul>
-    <tr *ngFor="let movie of movies; let i = index; trackBy: trackByFn;"> 
+    <tr *ngFor="let movie of movies; let i = index; let e = even; let o = odd;" [ngClass]="{ even: e, odd: o}"> 
         <td>{{i}}</td>
-        <td>{{movie.title}</td>
-        <td>{{movie.genre}</td>
-        <td>{{movie.mainCharacter}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.genre}}</td>
+        <td>{{movie.mainCharacter}}</td>
         <td>{{movie.musicScore}}</td>
     </tr> 
 </ul>           
