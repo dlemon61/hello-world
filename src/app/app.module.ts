@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SharedComponent } from './shared/shared.component';
 
 
 
@@ -14,6 +17,9 @@ import { BodyComponent } from './body/body.component';
     AppComponent,
     HeaderComponent,
     BodyComponent,
+    HomeComponent,
+    ProfileComponent,
+    SharedComponent,
 
     ],
   imports: [
