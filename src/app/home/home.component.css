@@ -12,3 +12,7 @@
 .odd {
   background-color: #66bb6a;
 }
+table th{
+  
+  justify-content: left;
+}
