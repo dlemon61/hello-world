@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title: string = 'My Top Five Movie Favorites';
+  num: number = 0;
+  showMe: boolean;
 
 movies: Movie[] = [
   {title: 'Beaches', genre: 'Drama', mainCharacter: 'Bette Midler', musicScore: 'Wind Beneath My Wings'},

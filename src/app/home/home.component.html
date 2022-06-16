@@ -1,4 +1,27 @@
+<h1>{{ title }}</h1>
 
+<div class="row">
+    Show <input type="checkbox" [(ngModel)]="showMe" />
+</div>
+<p *ngIf="showMe">
+    ShowMe is checked.
+</p>
+<p *ngIf="!showMe">
+    ShowMe is unchecked.
+</p>
+
+<div class="table-responsive">
+    <table class = 'table table-bordered table-sm'>
+        <thead class="thead-dark">
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Main Character</th>
+            <th>Music Score</th>
+        </tr>
+    </thead>
+</table>
+<tbody>
 <ul>
     <tr *ngFor="let movie of movies; let i = index; let first = first; let last = last;" [ngClass]="{ first: first, last: last}">
         <td>{{i}}</td>
@@ -9,7 +32,6 @@
     </tr>    
 </ul>
 <hr>
-
 <ul>
     <tr *ngFor="let movie of movies; let i = index; let e = even; let o = odd;" [ngClass]="{ even: e, odd: o}"> 
         <td>{{i}}</td>
@@ -18,5 +40,19 @@
         <td>{{movie.mainCharacter}}</td>
         <td>{{movie.musicScore}}</td>
     </tr> 
-</ul>           
-   
+</ul>  
+</tbody>
+
+<div>
+    <input type="text" [(ngModel)] = "num"/>
+    <div [ngSwitch]="num">
+    <div *ngSwitchCase="0">{{movies[0].title}}</div>
+    <div *ngSwitchCase="1">{{movies[1].title}}</div>
+    <div *ngSwitchCase="2">{{movies[2].title}}</div>
+    <div *ngSwitchCase="3">{{movies[3].title}}</div>
+    <div *ngSwitchCase="4">{{movies[4].title}}</div>
+    <div *ngSwitchDefault>This is a default</div>
+</div>
+</div>   
+
+
