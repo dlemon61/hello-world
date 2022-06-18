@@ -1,5 +1,5 @@
 <h1>{{ title }}</h1>
-
+<div>Current Time: {{toDate | date:'longTime'}}</div>
 <div class="row">
     Show <input type="checkbox" [(ngModel)]="showMe" />
 </div>
@@ -19,26 +19,32 @@
             <th>Genre</th>
             <th>Main Character</th>
             <th>Music Score</th>
+            <th>Premier Date</th>
+            <th>Premier Time</th>
         </tr>
     </thead>
 <tbody>
 
     <tr *ngFor="let movie of movies; let i = index; let first = first; let last = last;" [ngClass]="{ first: first, last: last}">
         <td>{{i}}</td>
-        <td>{{movie.title}}</td>
+        <td>{{movie.title | uppercase}}</td>
         <td>{{movie.genre}}</td>
         <td>{{movie.mainCharacter}}</td>
         <td>{{movie.musicScore}}</td>
+        <td>{{movie.premierDate}}</td>
+        <td>{{movie.premierTime}}</td>
     </tr>    
 
 <hr>
 
     <tr *ngFor="let movie of movies; let i = index; let e = even; let o = odd;" [ngClass]="{ even: e, odd: o}"> 
         <td>{{i}}</td>
-        <td>{{movie.title}}</td>
+        <td>{{movie.title | uppercase}}</td>
         <td>{{movie.genre}}</td>
         <td>{{movie.mainCharacter}}</td>
         <td>{{movie.musicScore}}</td>
+        <td>{{movie.premierDate}}</td>
+        <td>{{movie.premierTime}}</td>
     </tr> 
  
 </tbody>
